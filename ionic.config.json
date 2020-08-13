@@ -1,5 +1,7 @@
 {
   "name": "FreteApp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

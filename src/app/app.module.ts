@@ -8,6 +8,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import {GoogleMaps, GoogleMap, GoogleMapsEvent, LatLng, MarkerOptions, Marker} from '@ionic-native/google-maps';
+import { Component } from "@angular/core/";
 
 @NgModule({
   declarations: [AppComponent],
