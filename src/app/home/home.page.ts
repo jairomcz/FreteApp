@@ -112,6 +112,7 @@ export class HomePage implements OnInit {
           this.loading.dismiss();
       }
   }
+
   searchChanged() {
       if (!this.search.trim().length) return;
 
@@ -122,7 +123,6 @@ export class HomePage implements OnInit {
               this.searchResults = predictions;
           });
       });
-
 
   }
   async calcRoute(item: any) {
@@ -145,7 +145,6 @@ export class HomePage implements OnInit {
       }, async results => {
           console.log(results);
 
-
           const points = new Array < ILatLng > ();
           const routes = results.routes[0].overview_path;
 
@@ -161,10 +160,12 @@ export class HomePage implements OnInit {
               color: '#000',
               width: 3
           });
-          this.map.moveCamera({
-              target: points
+         await this.map.moveCamera({target: points});
+         //usado pro navegador
+          this.map.panBy(0,90);
+        //usado pra android;
 
-          });
+        //usado para ios;
       });
     }
 async back(){
